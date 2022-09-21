@@ -1,38 +1,60 @@
 .App {
   text-align: center;
+  width: 320px;
+  color: wheat;
+  height: 500px;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html {
+  background-color: black;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.highlight-section {
+  position: relative;
+  width: 320px;
+  overflow: hidden;
+  height: 320px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.slider-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  position: absolute;
+  transform: translateX();
+  transition: 800ms;
+}
+.inner-slider {
+  position: absolute;
+  width: 100%;
+  left: 0px;
+}
+.highlight-card {
+  background-color: rgb(72, 72, 94);
+  margin: 10px;
+  width: 300px;
+  height: 300px;
+ user-select: none;
+ position: relative;
+pointer-events: none;
 }
 
-.App-link {
-  color: #61dafb;
+.btn-indicator {
+  padding: 0;
+  width: 12px;
+  height: 12px;
+  border-radius: 100%;
+  border-style: none;
+  margin: 4px;
+  cursor: pointer;
+  background-color: dimgray;
+  
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.active-btn{
+  background-color: #FF3600;
+  padding: 0;
+  width: 12px;
+  height: 12px;
+  border-radius: 100%;
+  border-style: none;
+  margin: 4px;
+  cursor: pointer;
 }
